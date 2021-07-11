@@ -1,0 +1,453 @@
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+/*--------------------------------------------------------header----------------------------------------------------------------------*/
+
+#header{
+    width:100%;
+    min-height:100vh;
+    background-image: linear-gradient(rgba(72, 200, 209, 0.35),rgba(72, 200, 209, 0.35)),url(images/background1.jpg);
+    background-size:cover;
+}
+
+.nav{
+    display:flex;
+    justify-content:space-between;
+}
+
+#logo:hover{
+    transform:scale(1.2);
+    transition:0.5s;
+}
+
+.nav-links nav ul{
+    list-style-type: none;
+}
+
+.nav-links nav ul li{
+    display:inline-block;
+    align-items: center;
+    margin-right:40px;
+    margin-top: 50px;
+    font-size:2rem;
+}
+
+.nav-links nav ul li a{
+    text-decoration: none;
+    color:rgb(201, 152, 28);
+    font-weight: 800;
+    font-family: 'Tourney', cursive;
+    position:relative;
+}
+
+.nav-links nav ul li a:hover{
+    color:rgb(175, 133, 25);
+}
+
+
+.nav-links nav ul li a::after{
+    content:"";
+    width:0%;
+    height:4px;
+    background-color:rgb(184, 85, 159);
+    position:absolute;
+    bottom:-2px;
+    left:0%;
+    transition:0.5s;
+    text-align:center;
+}
+
+.nav-links nav ul li a:hover::after{
+    width:100%;
+}
+
+.fa{
+    display:none;
+}
+
+#shwetawedsmiraj{
+    font-size: 100px;
+    font-family: 'Playball', cursive;
+    text-align:center;
+    padding-top: 250px;
+    line-height: 75px;
+    color:rgb(184, 85, 159);
+    letter-spacing: 3px;
+}
+
+#weds{
+    text-align:center;
+    font-size:65px;
+    font-family: 'Playball', cursive;
+}
+
+/*------------------------------------------------------------------pictures------------------------------------------------------------*/
+
+#pictures{
+    margin:0;
+    margin-top:50px;
+    overflow-x:hidden;
+}
+
+h2{
+    color:rgb(175, 133, 25);
+    font-weight:600;
+    font-size:60px;
+    font-family: 'Festive', cursive;
+    text-align:center;
+    margin-bottom:50px;
+}
+
+#pictures img{
+    width: 31.8vw;
+    height: 42vh;
+    border-radius: 10px;
+    
+}
+
+#profile{
+    display:flex;
+    justify-content: space-between;
+}
+
+#profile-image{
+    margin:10px;
+    position:relative;
+}
+
+.layer{
+    height:100%;
+    width:100%;
+    background-color:transparent;
+    position:absolute;
+    top:0;
+    left:0;
+}
+
+.layer:hover{
+    background-color:rgb(184, 85, 159, 0.5);
+}
+
+.layer h3{
+    width:100%;
+    position:absolute;
+    bottom:2%;
+    left:25%;
+    font-size: 35px;
+    font-weight:bold;
+    color:#fff;
+    opacity:0;   
+    transition: 0.5s; 
+    font-family: 'Ruslan Display', cursive; 
+}
+
+#profile-image:hover .layer h3{
+    bottom:40%;
+    opacity:1;     
+}
+
+/*----------------------mehendi---------------------------*/
+#mehendi{
+    width:100vw;
+    min-height:100vh;
+    background-color:rgb(212, 155, 49);
+    background-image: url(images/mehendi/background-mehendi.jpg);
+    background-size:cover;
+    background-attachment: fixed;
+    position:relative;
+    margin-top:150px;
+    overflow-x:hidden;
+}
+
+#mehendi h2{
+    color:white;
+    font-size:80px;
+    padding-top:25px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width:100vw;
+    display:inline-flex;
+    justify-content: space-around;
+}
+
+#first-word{
+    text-align:left;
+}
+
+#second-word{
+    text-align:right;
+}
+
+#background{
+    width: 60%;
+    height:70%;
+    position:absolute;
+    top:150px;
+    right:100px;
+    background-image: url(images/mehendi/background-mehendi1.jpg);
+    background-size:100% 100%;
+    box-shadow: 1px 2px 10px 10px white;
+    transform: translate(-25%);
+    animation-name: slider;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-direction:normal;
+    animation-timing-function:linear;
+}
+
+@keyframes slider{
+    0%{
+        background-image: url(images/mehendi/background-mehendi1.jpg);
+    }
+    20%{
+        background-image: url(images/mehendi/background-mehendi2.jpg);
+    }
+    40%{
+        background-image: url(images/mehendi/background-mehendi3.jpg);
+    }
+    60%{
+        background-image: url(images/mehendi/background-mehendi4.jpg);
+    }
+    80%{
+        background-image: url(images/mehendi/background-mehendi5.jpg);
+    }
+}
+
+#mehendi-pictures{
+    margin:10px;
+    width:100%;
+    min-height:100vh;
+    position:relative;
+}
+
+.grid-container{
+    width:100%;
+    min-height:300vh;
+    position:absolute;
+    top:0px;
+    right:0%;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-gap:10px;
+    justify-content:center;
+    align-content:center;
+}
+
+.cell{
+    width:100%;
+    height:100%;
+
+}
+
+.img1{
+    background-image: url(images/mehendi/mehendi-img1.jpg);
+    background-size:cover;
+    background-position: center;
+    grid-row:1/3;
+    grid-column:1/2;
+}
+
+.img2{
+    background-image: url(images/mehendi/mehendi-img2.jpg);
+    background-size:cover;
+    grid-row:1/3;
+    grid-column:2/5
+}
+
+.img3{
+    background-image: url(images/mehendi/mehendi-img3.jpg);
+    background-size:cover;
+    grid-row:1/2;
+    grid-column:5/7;
+}
+
+.img4{
+    background-image: url(images/mehendi/mehendi-img4.jpg);
+    background-size:cover;
+    grid-row:2/4;
+    grid-column:5/7;
+}
+
+.img5{
+    background-image: url(images/mehendi/mehendi-img5.jpg);
+    background-size:cover;
+    grid-row:3/6;
+    grid-column:3/5;
+}
+
+.img6{
+    background-image: url(images/mehendi/mehendi-img6.jpg);
+    background-size:cover;
+    grid-row:3/5;
+    grid-column:1/3;
+}
+
+.img7{
+    background-image: url(images/mehendi/mehendi-img7.jpg);
+    background-size:cover;
+    grid-row: 4/6;
+    grid-column: 5/7;
+}
+
+.img8{
+    background-image: url(images/mehendi/mehendi-img8.jpg);
+    background-size:cover;
+    grid-row: 5/6;
+    grid-column: 1/3;
+}
+
+.img9{
+    background-image: url(images/mehendi/mehendi-img9.jpg);
+    background-size:cover;
+    grid-row: 6/8;
+    grid-column: 1/4;
+}
+
+.img10{
+    background-image: url(images/mehendi/mehendi-img10.jpg);
+    background-size:cover;
+    grid-row:6/8;
+    grid-column:4/6;
+}
+
+.img11{
+    background-image: url(images/mehendi/mehendi-img11.jpg);
+    background-size:cover;
+    grid-row:6/8;
+    grid-column: 6/7;
+}
+
+.img12{
+    background-image: url(images/mehendi/mehendi-img12.jpg);
+    background-size:cover;
+    grid-row:8/10;
+    grid-column: 4/7;
+}
+
+.img13{
+    background-image: url(images/mehendi/mehendi-img13.jpg);
+    background-size:cover;
+    grid-row:8/10;
+    grid-column:1/4;
+}
+
+.img14{
+    background-image: url(images/mehendi/mehendi-img14.jpg);
+    background-size:cover;
+    grid-row:10/12;
+    grid-column:1/2;
+}
+
+.img15{
+    background-image: url(images/mehendi/mehendi-img15.jpg);
+    background-size:cover;
+    grid-row:10/12;
+    grid-column: 2/5;
+}
+
+.img16{
+    background-image: url(images/mehendi/mehendi-img16.jpg);
+    background-size:cover;
+    grid-row: 10/12;
+    grid-column: 5/7;
+}
+
+
+
+/*-------------------------@media-------------------------*/
+
+@media(max-width:1024px){
+
+    #header{
+        background-image: linear-gradient(rgba(106, 186, 192, 0.35),rgba(106, 186, 192, 0.35)),url(images/background1.jpg);
+        background-size:150% 70%;
+        background-repeat: no-repeat;
+        min-height:100vh;
+        width:100vw;
+    }
+    
+
+    #logo{
+        width:100px;
+        height:auto;
+        padding:20px;
+        
+    }
+
+    .nav-links nav ul{
+        margin-top:20px;
+    }
+    .nav-links nav ul li{
+        display:block;
+        align-items: center;
+        margin-right:10px;
+        margin-top: 10px;
+        font-size:1.2rem;
+        line-height: 2rem;
+    }
+
+    .fa{
+        display:block;
+        color:#fff;
+        font-size:3rem;
+    }
+
+    #showMenu{
+        padding:30px;
+        color:rgb(211, 159, 28);
+    }
+
+    #hideMenu{
+        padding:10px;
+    }
+
+    #shwetawedsmiraj{
+        font-size: 4rem;
+        padding-top: 25%;
+    }
+    
+    #weds{
+        font-size:3rem;
+    }
+
+    #menu{
+        width:40vw;
+        background-color:rgb(175, 133, 25);
+        height:70vh;
+        position:absolute;
+        top:0;
+        right:-40vw;
+        transition:0.5s;
+    }
+
+    #pictures{
+        margin-top:-150px;
+    }
+
+    #profile{
+        display:block;
+    }
+    
+    #pictures img{
+        width: 95.4vw;
+        height: auto;        
+    }
+
+    .nav-links nav ul li{
+        margin-left:10px;
+        padding-bottom:10px;
+        font-size:1.2rem;
+    }
+
+    .nav-links nav ul li a{
+        color:#fff;
+    }
+    
+}
+    
