@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+:root{
+    /* light pink colors */
+    --color-primary-pink-1: #ff0a54;
+    --color-primary-pink-2: #ff477e;
+    --color-primary-pink-3: #ff5c8a;
+    --color-primary-pink-4: #ff7096;
+    --color-primary-pink-5: #ff85a1;
+    --color-primary-pink-6: #ff99ac;
+    --color-primary-pink-7: #fbb1bd;
+    --color-primary-pink-8: #f9bec7;
+    --color-primary-pink-9: #f7cad0;
+    --color-primary-pink-10: #fae0e4;
+
+    /* dark red colors */
+    --color-primary-red-1: #641220;
+    --color-primary-red-2: #6e1423;
+    --color-primary-red-3: #85182a;
+    --color-primary-red-4: #a11d33;
+    --color-primary-red-5: #a71e34;
+    --color-primary-red-6: #a71e34;
+    --color-primary-red-7: #b21e35;
+    --color-primary-red-8: #bd1f36;
+    --color-primary-red-9: #c71f37;
+    --color-primary-red-10: #da1e37;
+    --color-primary-red-11: #e01e37;
+
+    /* black to grey */
+    --color-blackgrey-1:#212529;
+    --color-blackgrey-2:#343a40;
+    --color-blackgrey-3:#495057;
+    --color-blackgrey-4:#6c757d;
+    --color-blackgrey-5:#adb5bd;
+    --color-blackgrey-6:#ced4da;
+    --color-blackgrey-7:#dee2e6;
+    --color-blackgrey-8:#e9ecef;
+    --color-blackgrey-9:#f8f9fa;
+    --color-blackgrey-10:#fff;
+    
+    /* other properties */
+    --main-font: 'Roboto', sans-serif;
+    --secondary-font: 'Open Sans', sans-serif;
+
+    --transition: all 0.3s linear;
+    --spacing: 0.1rem;
+    --radius: 0.25rem;
+    --max-width: 1170px;
+    --fixed-width: 620px;
+    --light-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+*,
+::before,
+::after{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+.icon::before {
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+  }
+
+#main{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--color-blackgrey-10);
+}
+.container{
+    width: 90%;
+    /* height: 100vh; */
+    margin: 0 auto;
+    padding-top: 5rem;
+    display:grid;
+    place-items: center;
+    text-align: center;
+}
+.title{
+    text-transform: capitalize;
+    font-family: var(--main-font);
+}
+.underline{
+    width: 6.5rem;
+    height: 0.25rem;
+    background-color: var(--color-primary-red-4);
+    border-radius: var(--radius);
+    margin: 0 auto;
+    margin-top: 1.5rem;
+}
+.comments{
+    width: 80%;
+    max-width: var(--fixed-width);
+    margin-top: 3rem;
+    background-color: var(--color-primary-pink-10);
+    border-radius: var(--radius);
+    box-shadow: var(--light-shadow);
+    transition: var(--transition);
+}
+.comments:hover{
+    box-shadow: var(--dark-shadow);
+}
+
+.img-container{
+    width:150px;
+    height:150px;
+    margin: 1.5rem auto;
+    position:relative;
+    border-radius:50%;
+}
+#attendee-img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    border-radius: 50%;
+    position:relative;
+}
+.img-container::after{
+    font-family: "Font Awesome 5 Free";
+    content: "\f10d";
+    font-weight: 900;
+    font-size: 1.5rem;
+    color:var(--color-primary-red-8);
+    position:absolute;
+    top:10%;
+    left:5%;
+}
+
+.img-container::before{
+    content:'';
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    background-color:var(--color-primary-red-8);
+    position:absolute;
+    top:0;
+    right:0;
+    transform: translate(5%,-5%);
+}
+
+#name{
+    text-transform: capitalize;
+    font-family: var(--secondary-font);
+    margin-bottom: 0.75rem;
+    font-size:1rem;
+    color: var(--color-blackgrey-2);
+}
+#relation{
+    text-transform: uppercase;
+    font-family: var(--secondary-font);
+    margin-bottom: 0.75rem;
+    font-size:0.9rem;
+    color:var(--color-primary-red-8);
+}
+#comment{
+    font-family: var(--secondary-font);
+    padding: 0 20px;
+    font-size:0.9rem;
+}
+.buttons{
+    display:flex;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: var(--color-primary-red-8);
+}
+.fa{
+    margin:1rem;
+    cursor:pointer;
+}
+.fa:hover{
+    color: var(--color-primary-red-3);
+}
+.random-btn{
+    background-color:var(--color-primary-pink-10);
+    font-size:1rem;
+    padding:0.25rem;
+    margin-bottom: 1rem;
+    border-color: var(--color-primary-red-8);
+    color: var(--color-primary-red-8);
+    border-radius: var(--radius);
+    text-transform:capitalize;
+    cursor:pointer;
+}
+.random-btn:hover{
+    background-color:var(--color-primary-pink-8);
+    color: var(--color-primary-red-4);
+}
+
+
+
+

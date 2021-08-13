@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comments</title>
+    <!-- font awesome from cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- linking to stylesheet -->
+    <link rel="stylesheet" href="comments.css">
+</head>
+
+<body>
+    <main id="main">
+        <section class="container">
+            <div class="title">
+                <h1>what attendees say:</h1>
+                <div class="underline"></div>
+            </div>
+            <article class="comments">
+                <div class="img-container">
+                    <img src="" alt="attendee image" id="attendee-img">
+                </div>
+                <p id="name"></p>
+                <p id="relation"></p>
+                <p id="comment"></p>
+                <div class="buttons">
+                    <div class="prev-btn">
+                        <i class="fa fa-arrow-left"></i>
+                    </div>
+                    <div class="next-btn">
+                        <i class="fa fa-arrow-right"></i>
+                    </div>
+                </div>
+                <button class="random-btn">Other reviews!</button>
+            </article>
+        </section>
+    </main>
+    <script src="https://use.fontawesome.com/1525dd0b9f.js"></script>
+    <script src="comments.js"></script>
+</body>
+
+</html>

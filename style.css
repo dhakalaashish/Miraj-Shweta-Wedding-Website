@@ -1,3 +1,98 @@
+Fonts
+===============
+*/
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+/*
+=============== 
+Variables
+===============
+*/
+:root {
+    /* dark shades of primary color*/
+    --clr-primary-1: hsl(205, 86%, 17%);
+    --clr-primary-2: hsl(205, 77%, 27%);
+    --clr-primary-3: hsl(205, 72%, 37%);
+    --clr-primary-4: hsl(205, 63%, 48%);
+    /* primary/main color */
+    --clr-primary-5: hsl(205, 78%, 60%);
+    /* lighter shades of primary color */
+    --clr-primary-6: hsl(205, 89%, 70%);
+    --clr-primary-7: hsl(205, 90%, 76%);
+    --clr-primary-8: hsl(205, 86%, 81%);
+    --clr-primary-9: hsl(205, 90%, 88%);
+    --clr-primary-10: hsl(205, 100%, 96%);
+    /* darkest grey - used for headings */
+    --clr-grey-1: hsl(209, 61%, 16%);
+    --clr-grey-2: hsl(211, 39%, 23%);
+    --clr-grey-3: hsl(209, 34%, 30%);
+    --clr-grey-4: hsl(209, 28%, 39%);
+    /* grey used for paragraphs */
+    --clr-grey-5: hsl(210, 22%, 49%);
+    --clr-grey-6: hsl(209, 23%, 60%);
+    --clr-grey-7: hsl(211, 27%, 70%);
+    --clr-grey-8: hsl(210, 31%, 80%);
+    --clr-grey-9: hsl(212, 33%, 89%);
+    --clr-grey-10: hsl(210, 36%, 96%);
+    --clr-white: #fff;
+    --clr-red-dark: hsl(360, 67%, 44%);
+    --clr-red-light: hsl(360, 71%, 66%);
+    --clr-green-dark: hsl(125, 67%, 44%);
+    --clr-green-light: hsl(125, 71%, 66%);
+    --clr-black: #222;
+    --ff-primary: "Roboto", sans-serif;
+    --ff-secondary: "Open Sans", sans-serif;
+
+
+    /* light pink colors */
+    --color-primary-pink-1: #ff0a54;
+    --color-primary-pink-2: #ff477e;
+    --color-primary-pink-3: #ff5c8a;
+    --color-primary-pink-4: #ff7096;
+    --color-primary-pink-5: #ff85a1;
+    --color-primary-pink-6: #ff99ac;
+    --color-primary-pink-7: #fbb1bd;
+    --color-primary-pink-8: #f9bec7;
+    --color-primary-pink-9: #f7cad0;
+    --color-primary-pink-10: #fae0e4;
+
+    /* dark red colors */
+    --color-primary-red-1: #641220;
+    --color-primary-red-2: #6e1423;
+    --color-primary-red-3: #85182a;
+    --color-primary-red-4: #a11d33;
+    --color-primary-red-5: #a71e34;
+    --color-primary-red-6: #a71e34;
+    --color-primary-red-7: #b21e35;
+    --color-primary-red-8: #bd1f36;
+    --color-primary-red-9: #c71f37;
+    --color-primary-red-10: #da1e37;
+    --color-primary-red-11: #e01e37;
+
+    /* black to grey */
+    --color-blackgrey-1:#212529;
+    --color-blackgrey-2:#343a40;
+    --color-blackgrey-3:#495057;
+    --color-blackgrey-4:#6c757d;
+    --color-blackgrey-5:#adb5bd;
+    --color-blackgrey-6:#ced4da;
+    --color-blackgrey-7:#dee2e6;
+    --color-blackgrey-8:#e9ecef;
+    --color-blackgrey-9:#f8f9fa;
+    --color-blackgrey-10:#fff;
+    
+    /* other properties */
+    
+
+    --transition: all 0.3s linear;
+    --spacing: 0.1rem;
+    --radius: 0.25rem;
+    --max-width: 1170px;
+    --fixed-width: 620px;
+    --light-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+
 *,
 *::after,
 *::before{
@@ -8,21 +103,41 @@
 
 /*--------------------------------------------------------header----------------------------------------------------------------------*/
 
-#header{
+.entry-picture{
     width:100%;
     min-height:100vh;
-    background-image: linear-gradient(rgba(72, 200, 209, 0.35),rgba(72, 200, 209, 0.35)),url(images/background1.jpg);
+    background-image: url(images/background1.jpg);
+    /* linear-gradient(rgba(0, 80, 157, 0.35),rgba(0, 80, 157, 0.35)), */
     background-size:cover;
+    background-attachment: fixed;
 }
 
-.nav{
+.header{
+    width:100%;
+    height:6rem;
+    background:rgba(25, 57, 174,0.7);
+    box-shadow: var(--dark-shadow);
+}
+
+.header-center{
+    width:98%;
+    height:6rem;
+    margin: 0 auto;
     display:flex;
     justify-content:space-between;
 }
+.logo{
+    display:grid;
+    place-items: center;
+}
+#logo{
+    width:5rem;
+    height:5rem;
+}
 
 #logo:hover{
-    transform:scale(1.2);
-    transition:0.5s;
+    transform:scale(1.1);
+    transition:var(--transition);
 }
 
 .nav-links nav ul{
@@ -31,26 +146,26 @@
 
 .nav-links nav ul li{
     display:inline-block;
-    align-items: center;
-    margin-right:40px;
-    margin-top: 50px;
-    font-size:2rem;
+    align-content: center;
+    margin-right:1rem;
+    margin-top: 2.5rem;
+    font-size:1.5rem;
 }
 
 .nav-links nav ul li a{
     text-decoration: none;
-    color:rgb(201, 152, 28);
+    color:hsl(47, 80%, 44%);
     font-weight: 800;
     font-family: 'Tourney', cursive;
     position:relative;
 }
 
 .nav-links nav ul li a:hover{
-    color:rgb(175, 133, 25);
+    color:hsl(47, 100%, 44%);
 }
 
 
-.nav-links nav ul li a::after{
+/* .nav-links nav ul li a::after{
     content:"";
     width:0%;
     height:4px;
@@ -64,20 +179,24 @@
 
 .nav-links nav ul li a:hover::after{
     width:100%;
-}
+} */
 
-.fa{
+#hideMenu,
+#showMenu{
     display:none;
 }
-
+.title{
+    height: 6rem;
+}
 #shwetawedsmiraj{
-    font-size: 100px;
-    font-family: 'Playball', cursive;
+    font-size: 5rem;
+    /* font-family: 'Roboto', sans-serif;
     text-align:center;
-    padding-top: 250px;
+    
     line-height: 75px;
-    color:rgb(184, 85, 159);
-    letter-spacing: 3px;
+    color:rgb(253, 197, 0);
+    letter-spacing: 3px; */
+    
 }
 
 #weds{
@@ -105,7 +224,7 @@ h2{
 
 #pictures img{
     width: 31.8vw;
-    height: 42vh;
+    height: 49vh;
     border-radius: 10px;
     
 }
@@ -130,7 +249,7 @@ h2{
 }
 
 .layer:hover{
-    background-color:rgb(184, 85, 159, 0.5);
+    background-color:rgba(184, 85, 159, 0.2);
 }
 
 .layer h3{
@@ -152,35 +271,32 @@ h2{
 }
 
 /*----------------------mehendi---------------------------*/
+
+.mehendi-main{
+    height:430vh;
+}
 #mehendi{
     width:100vw;
     min-height:100vh;
-    background-color:rgb(212, 155, 49);
     background-image: url(images/mehendi/background-mehendi.jpg);
     background-size:cover;
-    background-attachment: fixed;
     position:relative;
-    margin-top:150px;
     overflow-x:hidden;
+}
+.animation-container{
+    position:relative;
+    width:100vw;
+    height:100vh;
 }
 
 #mehendi h2{
     color:white;
-    font-size:80px;
-    padding-top:25px;
-    padding-left: 20px;
-    padding-right: 20px;
-    width:100vw;
-    display:inline-flex;
-    justify-content: space-around;
-}
-
-#first-word{
+    font-size:5rem;
+    padding-left: 10px;
+    width:95vw;
+    line-height: 5rem;
     text-align:left;
-}
-
-#second-word{
-    text-align:right;
+    transform: translateY(250%);
 }
 
 #background{
@@ -191,7 +307,7 @@ h2{
     right:100px;
     background-image: url(images/mehendi/background-mehendi1.jpg);
     background-size:100% 100%;
-    box-shadow: 1px 2px 10px 10px white;
+    box-shadow: 1px 2px 10px 10px orange;
     transform: translate(-25%);
     animation-name: slider;
     animation-duration: 20s;
@@ -217,17 +333,20 @@ h2{
         background-image: url(images/mehendi/background-mehendi5.jpg);
     }
 }
+#mehendi-pictures-title{
+margin-top:3rem;
+}
 
 #mehendi-pictures{
-    margin:10px;
-    width:100%;
+    width:99%;
     min-height:100vh;
     position:relative;
 }
 
 .grid-container{
-    width:100%;
+    width:99%;
     min-height:300vh;
+    margin: 0 auto;
     position:absolute;
     top:0px;
     right:0%;
@@ -257,7 +376,7 @@ h2{
     background-image: url(images/mehendi/mehendi-img2.jpg);
     background-size:cover;
     grid-row:1/3;
-    grid-column:2/5
+    grid-column:2/5;
 }
 
 .img3{
@@ -284,6 +403,7 @@ h2{
 .img6{
     background-image: url(images/mehendi/mehendi-img6.jpg);
     background-size:cover;
+    object-fit: center;
     grid-row:3/5;
     grid-column:1/3;
 }
@@ -357,8 +477,6 @@ h2{
     grid-row: 10/12;
     grid-column: 5/7;
 }
-
-
 
 /*-------------------------@media-------------------------*/
 
@@ -450,4 +568,3 @@ h2{
     }
     
 }
-    
